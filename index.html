@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
+<body>
+  <header>
+    <h1>// To-Do </h1>
+  </header>
+  <main>
+    <nav>
+      <div class="home">
+        <h2>Home</h2>
+        <div class="count"></div>
+      </div>
+      <div class="projects">
+        <h2>Projects:-</h2>
+        <ul class="projectList">
+          <li>General</li>
+        </ul>
+      </div>
+      <button class="addButton">+</button>
+    </nav>
+    <div id="content"></div>
+    <div class="homeFeed hide"></div>
+  </main>
+  
+  <dialog id="favDialog" class="hide">
+    <div class="dialogHeading">
+      <h1>Create a new...</h1>
+      <button class="dialogCross" value="cancel" formmethod="dialog">X</button>
+    </div>
+    <nav>
+      <div class="ToDoChoice">To Do</div>
+      <div class="ProjectChoice">Project</div>
+    </nav>
+    <form class="toDoForm">
+      <div class="titleContainer">
+        <label for="title">Title:</label>
+        <input type="text" id="title" placeholder="complete today lecture">
+      </div>
+      <div class="detailsContainer">
+        <label for="details">Details:</label>
+        <textarea name="details" id="details" cols="30" rows="10" placeholder="math lecture , physics lecture for optics"></textarea>
+      </div>
+      <div class="dateContainer">
+        <label for="due-date">Due Date:</label>
+        <input type="date" id="due-date">
+      </div>
+      <div class="priorityContainer">
+        <h3>Priority:</h3>
+        <button class="low">LOW</button>
+        <button class="medium">MEDIUM</button>
+        <button class="high">HIGH</button>
+      </div>
+      <div class="projectListContainer">
+        <label for="projectList">Project: </label>
+        <select name="project" id="projectList">
+          <option value="General">General</option>
+        </select>
+      </div>
+      <button class="addToDo" value="default">ADD TO DO</button>
+    </form>
+    <form action="" class="projectForm hide">
+      <div class="titleContainer">
+        <label for="projectTitle">Title:</label>
+        <input type="text" id="projectTitle" placeholder="Study">
+      </div>
+      <button class="addProjectButton" value="default">ADD PROJECT</button>
+    </form>
+    
+    
+  </dialog>
+</body>
+</html>
